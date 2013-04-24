@@ -1,0 +1,233 @@
+/* RESET */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, figure {
+margin: 0;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+:focus {
+outline: 0;
+}
+textarea {
+resize: none;
+}
+fieldset, img {
+border: 0
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+font-style: normal;
+font-weight: normal;
+}
+caption, th {
+text-align: left
+}
+q:before, q:after {
+content: ''
+}
+abbr, acronym {
+border: 0
+}
+
+html {
+background: #e3e3e3;
+overflow-y: scroll;
+}
+
+body {
+color: #666;
+font-size: 14px;
+font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+margin: 0 auto;
+width: 100%;
+max-width: 90%;
+}
+
+.content {
+background-color: #ffffff;
+border-right: 1px solid rgba(0,0,0,0.2);
+border-left: 1px solid rgba(0,0,0,0.2);
+border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+nav {
+background-color: #d81102;
+padding: 0.5em 1em;
+}
+
+h1 {
+color: #ffffff;
+font-size: 3em;
+display: inline;
+text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+letter-spacing: 1px;
+}
+
+h1 a {
+color: #ffffff;
+text-decoration: none;
+}
+
+
+input[type="text"]{
+border: 1px solid rgba(0,0,0,0.6);
+font-size: 1em;
+line-height: 2;
+padding:3px 5px;
+width: 75%;
+background:#ffffff;
+border-top-left-radius: 2px;
+border-bottom-left-radius:2px;
+}
+
+::-webkit-input-placeholder {
+color: #ccc;
+font-size: 0.8em;
+font-style:italic;
+text-align: center;
+}
+
+input[type="submit"]{
+border: 1px solid rgba(0,0,0,0.2);
+background:#111111 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d81102), to(#990801));
+color: #ffffff;
+font-size: 1em;
+line-height: 2;
+margin-left: -5px;
+padding: 3px 5px;
+width: 20%;
+border-top-right-radius: 2px;
+border-bottom-right-radius:2px;
+text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+font-weight: bold;
+cursor: pointer;
+}
+
+.message {
+color: #ffffff;
+margin: 0.5em 0;
+font-style: italic;
+}
+
+.lastfm {
+text-align: center;
+padding: 5%;
+}
+
+figure {
+font-size: 2em;
+display: inline-block;
+text-align: left;
+}
+
+.recordNo {
+margin-left:-60px;
+display: none;
+}
+
+.artistName {
+font-size: 0.8em;
+font-family: Georgia, Times, "Times New Roman", serif;
+font-style: italic;
+padding-bottom: 0.5em;
+border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+.trackName {
+display: inline-block;
+color: #D51007;
+text-decoration: none;
+font-weight: bold;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+
+.vinyl{
+border-radius: 150px;
+display: inline-block;
+width:300px;
+height: 300px;
+background-color:#111;
+background-image: -webkit-gradient( linear, right top, left bottom, from(transparent), color-stop(0.1, transparent), color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.9, transparent), to(transparent));
+position: relative;
+margin: 0.5em 0;
+-webkit-box-shadow: 1px 2px 5px rgba(0,0,0,1);
+}
+
+.recordLabel {
+-webkit-mask-box-image: -webkit-radial-gradient(50% 50%, circle cover, #2b2b2b 33%,#2b2b2b 33%);
+-webkit-backface-visibility: hidden;
+-webkit-transform-style: preserve-3d;
+-moz-border-radius: 125px;
+-webkit-border-radius: 125px;
+border-radius: 125px;
+width: 250px;
+height: 250px; 
+position: absolute;
+top:25px;
+left:25px;
+}
+
+/* UTILITIES */
+.clearfix:after {
+content: ".";
+display: block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+
+.rounded {
+-webkit-border-bottom-right-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-bottomright: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-left-radius: 4px;
+}
+
+.redGradient {
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8C1004), to(#730c02));	
+}
+
+.dropShadow {
+-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* ANIMATIONS */
+.recordLabel {
+-webkit-animation-name: rotate;
+-webkit-animation-duration: 3s;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(360deg);}
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 480px) {
+.recordInfo {
+margin: 0 5%;
+}
+}
+
+@media screen and (min-width: 600px){
+
+.recordInfo {
+width:40%;
+}
+}
+
+@media screen and (min-width: 960px) {
+.recordInfo {
+width: 20%;
+}
+
+}
