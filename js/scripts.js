@@ -15,7 +15,7 @@ $(document).ready(function(){
 						} else { 
 						    var txt = ''; 
 						}
-	                 	$('.lastfm').append('<figure class="recordInfo clearfix"><span class="recordNo">#'+number+'</span><a class="trackName" href="'+item.url+'">'+item.name+'</a><p class="artistName">'+item.artist.name+'</p><div class="vinyl"><img class="recordLabel" src="' + txt + '" /></div></figure>');	
+	                 	$('.lastfm').append('<figure class="recordInfo"><h1 class="trackName"><a href="'+item.url+'">'+item.name+'</a></h1><h2 class="artistName">'+item.artist.name+'</h2><div class="vinyl"><img class="recordLabel" src="' + txt + '" /></div></figure>');	
 	                 });
 	             }
 	         });

@@ -41,67 +41,49 @@ font-size: 14px;
 font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 margin: 0 auto;
 width: 100%;
-max-width: 90%;
 }
 
 .content {
 background-color: #ffffff;
-border-right: 1px solid rgba(0,0,0,0.2);
-border-left: 1px solid rgba(0,0,0,0.2);
-border-bottom: 1px solid rgba(0,0,0,0.2);
+
 }
 
 nav {
 background-color: #d81102;
-padding: 0.5em 1em;
-}
-
-h1 {
-color: #ffffff;
-font-size: 3em;
-display: inline;
-text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-letter-spacing: 1px;
-}
-
-h1 a {
-color: #ffffff;
-text-decoration: none;
+padding: 1em;
 }
 
 
 input[type="text"]{
-border: 1px solid rgba(0,0,0,0.6);
+	box-sizing: border-box;
+border: none;
 font-size: 1em;
 line-height: 2;
 padding:3px 5px;
 width: 75%;
-background:#ffffff;
-border-top-left-radius: 2px;
-border-bottom-left-radius:2px;
+background:#fff;
+font-size: inherit;
+color: inherit;
+-webkit-appearance: none;
 }
 
 ::-webkit-input-placeholder {
 color: #ccc;
-font-size: 0.8em;
 font-style:italic;
-text-align: center;
+text-align: left;
 }
 
 input[type="submit"]{
-border: 1px solid rgba(0,0,0,0.2);
-background:#111111 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d81102), to(#990801));
-color: #ffffff;
+	box-sizing: border-box;
+border: none;
+background: rgba(0,0,0,0.2);
+color: #fff;
 font-size: 1em;
 line-height: 2;
-margin-left: -5px;
 padding: 3px 5px;
-width: 20%;
-border-top-right-radius: 2px;
-border-bottom-right-radius:2px;
-text-shadow: 0 1px 2px rgba(0,0,0,0.8);
-font-weight: bold;
+width: 23%;
 cursor: pointer;
+-webkit-appearance: none;
 }
 
 .message {
@@ -117,7 +99,6 @@ padding: 5%;
 
 figure {
 font-size: 2em;
-display: inline-block;
 text-align: left;
 }
 
@@ -127,12 +108,15 @@ display: none;
 }
 
 .artistName {
-font-size: 0.8em;
-font-family: Georgia, Times, "Times New Roman", serif;
-font-style: italic;
 padding-bottom: 0.5em;
 border-bottom: 2px solid rgba(0,0,0,0.2);
+
+font-weight: normal;
+font-size: 0.5em;
+font-family: Georgia, sans-serif;
+font-style: italic;
 }
+
 
 .trackName {
 display: inline-block;
@@ -141,6 +125,11 @@ text-decoration: none;
 font-weight: bold;
 text-overflow: ellipsis;
 overflow: hidden;
+font-size: 0.6em;
+}
+
+.trackName a {
+	color: inherit;
 }
 
 .vinyl{
@@ -166,7 +155,9 @@ width: 250px;
 height: 250px; 
 position: absolute;
 top:25px;
-left:25px;
+left:0;
+right: 0;
+margin: auto;
 }
 
 /* UTILITIES */
@@ -219,7 +210,12 @@ margin: 0 5%;
 }
 
 @media screen and (min-width: 600px){
-
+body {
+	max-width: 90%;
+	border-right: 1px solid rgba(0,0,0,0.2);
+	border-left: 1px solid rgba(0,0,0,0.2);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
 .recordInfo {
 width:40%;
 }
