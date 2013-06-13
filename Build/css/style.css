@@ -93,12 +93,13 @@ font-style: italic;
 }
 
 .lastfm {
-padding: 2.5%;
+text-align: center;
+padding: 5%;
 }
 
 figure {
 font-size: 2em;
-text-align: center;
+text-align: left;
 }
 
 .recordNo {
@@ -118,13 +119,13 @@ font-style: italic;
 
 
 .trackName {
-    display: inline-block;
-    color: #D51007;
-    text-decoration: none;
-    font-weight: bold;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    font-size: 0.6em;
+display: inline-block;
+color: #D51007;
+text-decoration: none;
+font-weight: bold;
+text-overflow: ellipsis;
+overflow: hidden;
+font-size: 0.6em;
 }
 
 .trackName a {
@@ -151,7 +152,7 @@ margin: 0.5em 0;
 -webkit-border-radius: 125px;
 border-radius: 125px;
 width: 250px;
-height: 250px;
+height: 250px; 
 position: absolute;
 top:25px;
 left:0;
@@ -168,11 +169,29 @@ clear:both;
 visibility:hidden;
 }
 
+.rounded {
+-webkit-border-bottom-right-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-bottomright: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-left-radius: 4px;
+}
+
+.redGradient {
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8C1004), to(#730c02));	
+}
+
+.dropShadow {
+-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
 
 /* ANIMATIONS */
 .recordLabel {
 -webkit-animation-name: rotate;
--webkit-animation-duration: 2s;
+-webkit-animation-duration: 3s;
 -webkit-animation-iteration-count: infinite;
 -webkit-animation-timing-function: linear;
 }
@@ -185,32 +204,26 @@ to {-webkit-transform: rotate(360deg);}
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 480px) {
-
+.recordInfo {
+margin: 0 5%;
+}
 }
 
 @media screen and (min-width: 600px){
-    body {
-    	max-width: 90%;
-    	border-right: 1px solid rgba(0,0,0,0.2);
-    	border-left: 1px solid rgba(0,0,0,0.2);
-    	border-bottom: 1px solid rgba(0,0,0,0.2);
-    }
-
-    .lastfm {
-        -webkit-columns: 2;
-    }
-
-    figure {
-        text-align: left;
-    }
+body {
+	max-width: 90%;
+	border-right: 1px solid rgba(0,0,0,0.2);
+	border-left: 1px solid rgba(0,0,0,0.2);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
-
-@media screen and (min-width: 900px) {
-    .lastfm {
-        -webkit-columns: 2.5;
-    }
+.recordInfo {
+width:40%;
+}
 }
 
 @media screen and (min-width: 960px) {
+.recordInfo {
+width: 20%;
+}
 
 }
