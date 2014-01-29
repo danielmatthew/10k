@@ -2,7 +2,7 @@ $(document).ready(function(){
 		var getTrending = function(){
 		     var akey = 'b8df9a60e079274d5a6dfb9974ed5b05'; //your api key
 		     // Get the JSON URL
-		     var lfmurl = 'http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&limit=10&api_key=' + akey + '&format=json&callback=?';
+		     var lfmurl = 'http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&limit=12&api_key=' + akey + '&format=json&callback=?';
 	              
 	         //Now get the Data
 	         $.getJSON(lfmurl, function(data){
@@ -15,7 +15,7 @@ $(document).ready(function(){
 						} else { 
 						    var txt = ''; 
 						}
-	                 	$('.lastfm').append('<figure class="recordInfo"><h1 class="trackName"><a href="'+item.url+'">'+item.name+'</a></h1><h2 class="artistName">'+item.artist.name+'</h2><div class="vinyl"><img class="recordLabel" src="' + txt + '" /></div></figure>');	
+	                 	$('.lastfm').append('<li class="recordInfo"><img class="recordLabel" src="' + txt + '"><span class="vinyl"></span></img></li>');	
 	                 });
 	             }
 	         });

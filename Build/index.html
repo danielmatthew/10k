@@ -1,13 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>10k Apart Entry</title>
-
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width">
-		
+	
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
 	<!--CSS-->
 	<link rel="stylesheet" href="css/style.css" />
 </head>
@@ -15,16 +34,14 @@
 <body>
 <div class="content clearfix">
 	<nav>
-			<form id="search" class="">
+		<form id="search" class="">
 			<input type="text" id="userName" class="" name="userName" placeholder="Enter a LastFM username">
-			<input type="submit" id="submit" class="" name="submit">
+			<!-- <input type="submit" id="submit" class="" name="submit"> -->
 		</form>
 		<p class="message"></p>
 	</nav>
-		
-	<section class="lastfm">
 
-	</section>
+	<section class="lastfm"></section>
 </div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
