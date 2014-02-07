@@ -13,7 +13,7 @@ $(document).ready(function(){
 	                 	if( item.image && item.image[3] && item.image[3]['#text'] ) { 
 						    var txt = item.image[3]['#text']; 
 						} else { 
-						    var txt = ''; 
+						    var txt = 'http://placehold.it/200x200/ffffff/d81102&text=Missing+artwork'; 
 						}
 	                 	$('.lastfm').append('<li class="recordInfo"><img class="recordLabel" src="' + txt + '"><span class="vinyl"></span></img></li>');	
 	                 });
@@ -31,7 +31,7 @@ $(document).ready(function(){
                  } else {
 	                 var akey = 'b8df9a60e079274d5a6dfb9974ed5b05'; //your api key
 	                 // Get the JSON URL
-	                 var lfmurl = 'http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&limit=10&user=' + user + '&api_key=' + akey + '&format=json&callback=?';
+	                 var lfmurl = 'http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&limit=12&user=' + user + '&api_key=' + akey + '&format=json&callback=?';
 	              
 			         //Now get the Data
 			         $.getJSON(lfmurl, function(data){
@@ -43,10 +43,10 @@ $(document).ready(function(){
 			                	if( item.image && item.image[3] && item.image[3]['#text'] ) { 
 								    var txt = item.image[3]['#text']; 
 								} else { 
-								    var txt = ''; 
+									var txt = 'http://placehold.it/200x200/ffffff/d81102&text=Missing+artwork'; 
 								}
 			                	
-			                	$('.lastfm').append('<figure class="clearfix"><span class="recordNo">#'+number+'</span><a class="trackName" href="'+item.url+'">'+item.name+'</a><p class="artistName">'+item.artist.name+'</p><div class="vinyl"><img class="recordLabel" src="' + txt + '" /></div></figure>');
+			                	$('.lastfm').append('<li class="recordInfo"><img class="recordLabel" src="' + txt + '"><span class="vinyl"></span></img></li>');	
 			                	
 			                });
 			             } else {

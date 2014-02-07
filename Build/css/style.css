@@ -8,20 +8,21 @@ width: 100%;
 }
 
 nav {
-padding: 1em 0;
+    margin: 1%;
+    box-sizing: border-box;
 }
 
 
 input[type="text"]{
-    width: 100%;
+    width: 70%;
     box-sizing: border-box;
     border: none;
-    font-size: 2em;
+    font-size: 1em;
     line-height: 3;
     padding:3px 5px;
 
     background:#fff;
-    font-size: inherit;
+    /*font-size: inherit;*/
     color: #333;
     -webkit-appearance: none;
 }
@@ -38,9 +39,9 @@ input[type="submit"]{
     background: rgba(0,0,0,0.2);
     color: #fff;
     font-size: 1em;
-    line-height: 2;
+    line-height: 3;
     padding: 3px 5px;
-    width: 24%;
+    width: 28%;
     cursor: pointer;
     -webkit-appearance: none;
 }
@@ -74,6 +75,14 @@ font-style: italic;
 	color: inherit;
 }
 
+.lastfm li {
+    position: relative;
+    display: inline;
+    width: 31%;
+    float: left;
+    margin: 0 1% 2%;
+}
+
 .recordLabel {
     /*-webkit-mask-box-image: -webkit-radial-gradient(50% 50%, circle cover, #2b2b2b 33%,#2b2b2b 33%);
     -webkit-backface-visibility: hidden;
@@ -85,6 +94,15 @@ font-style: italic;
     height: auto;
     margin: auto;
     box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
+}
+
+.byline {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+a {
+    color: inherit;
 }
 
 /* UTILITIES */
@@ -119,6 +137,18 @@ font-style: italic;
 @media screen and (min-width: 600px){
     body {
     	max-width: 80%;
+    }
+
+    nav {
+        margin: 1% 0;
+    }
+
+    input[type="text"]{
+        width: 80%;
+    }
+
+    input[type="submit"]{
+        width: 19%;
     }
 
     .lastfm li {
