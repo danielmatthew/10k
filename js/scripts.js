@@ -13,9 +13,9 @@ $(document).ready(function(){
 	                 	if( item.image && item.image[3] && item.image[3]['#text'] ) { 
 						    var txt = item.image[3]['#text']; 
 						} else { 
-						    var txt = 'http://placehold.it/200x200/ffffff/d81102&text=Missing+artwork'; 
+						    var txt = 'http://placehold.it/300x300/ffffff/d81102&text=Missing+artwork'; 
 						}
-	                 	$('.lastfm').append('<li class="recordInfo"><img class="recordLabel" src="' + txt + '"><span class="vinyl"></span></img></li>');	
+	                 	$('.lastfm').append('<div class="recordInfo"><img class="recordLabel" src="' + txt + '"/></li>');	
 	                 });
 	             }
 	         });
